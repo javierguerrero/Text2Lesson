@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  ms.sql.users.db:
+    container_name: ms.sql.users.db
+    restart: always
+    volumes:
+      - /c/data/docker/text2lesson/sqlserver:/var/opt/mssql/data
+    ports:
+      - "1433:1433"
+    environment:  #Parametros del comando
+      SA_PASSWORD: ".123Pass456."
+      ACCEPT_EULA: "Y"
+
+  ms.users.api:
+    container_name: ms.users.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:UserDB:HostName=ms.sql.users.db"
+      - "ConnectionStrings:UserDB:Catalogue=Users"
+      - "ConnectionStrings:UserDB:User=sa"
+      - "ConnectionStrings:UserDB:Password=.123Pass456."
+    ports:
+      - "9010:80"
+    depends_on:
+      - ms.sql.users.db

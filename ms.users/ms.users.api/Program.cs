@@ -12,8 +12,6 @@ ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
-
 builder.Services.AddSwaggerGen(swagger =>
 {
     swagger.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -40,9 +38,14 @@ builder.Services.AddSwaggerGen(swagger =>
                 });
 });
 
-
 // For Entity Framework
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("connMSSQL")));
+var connectionString = $"Server={configuration.GetConnectionString("UserDB:HostName")};" +
+                                $"Database={configuration.GetConnectionString("UserDB:Catalogue")};" +
+                                $"User ID={configuration.GetConnectionString("UserDB:User")};" +
+                                $"Password={configuration.GetConnectionString("UserDB:Password")};" +
+                                $"Encrypt=False;MultipleActiveResultSets=True;";
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
 // For Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
