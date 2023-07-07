@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="AutoMapper" Version="12.0.1" />
+	<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+
+	<PackageReference Include="MediatR" Version="9.0.0" />
+	<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+	  
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.8" />
+	  
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ms.students.application\ms.students.application.csproj" />
+    <ProjectReference Include="..\ms.students.domain\ms.students.domain.csproj" />
+    <ProjectReference Include="..\ms.students.infrastructure\ms.students.infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

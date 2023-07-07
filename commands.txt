@@ -1,4 +1,17 @@
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=.123Pass456." -p 1433:1433 --name ms.sql.users.db -v /c/data/docker/text2lesson/sqlserver:/var/opt/mssql/data -d mcr.microsoft.com/mssql/server:2022-latest
+Listar las imágenes instaladas en el equipo
+	docker image ls
+
+Creacion contenedores
+	docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=.123Pass456." -p 1433:1433 --name ms.sql.users.db -v /c/data/docker/text2lesson/sqlserver/users:/var/opt/mssql/data -d mcr.microsoft.com/mssql/server:2022-latest
+	docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=.123Pass456." -p 1434:1433 --name ms.sql.students.db -v /c/data/docker/text2lesson/sqlserver/students:/var/opt/mssql/data -d mcr.microsoft.com/mssql/server:2022-latest
+	
 
 Despliegue de contenedores en Docker
 	docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+	
+
+Connect to a different port with SQL Server Management Studio
+	Connect using a different port using a comma
+	localhost,1433
+	localhost,1434
+	

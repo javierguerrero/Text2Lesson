@@ -15,6 +15,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ms.users.domain", "ms.users
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{166ABBCB-CA35-406C-A478-1EAB6B470173}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ms.students", "ms.students", "{D9066443-EBE1-4AF0-8659-352AC0BE660C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.domain", "ms.students\ms.students.domain\ms.students.domain.csproj", "{F0F7D337-6F34-4554-9D33-DDD8919C6267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.application", "ms.students\ms.students.application\ms.students.application.csproj", "{FE2FFE06-00AA-44FE-8321-36FA11F991C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.infrastructure", "ms.students\ms.students.infrastructure\ms.students.infrastructure.csproj", "{428B16D1-5E72-4832-8D63-E99936964D03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.api", "ms.students\ms.students.api\ms.students.api.csproj", "{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +51,22 @@ Global
 		{166ABBCB-CA35-406C-A478-1EAB6B470173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{166ABBCB-CA35-406C-A478-1EAB6B470173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{166ABBCB-CA35-406C-A478-1EAB6B470173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F7D337-6F34-4554-9D33-DDD8919C6267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F7D337-6F34-4554-9D33-DDD8919C6267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F7D337-6F34-4554-9D33-DDD8919C6267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F7D337-6F34-4554-9D33-DDD8919C6267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2FFE06-00AA-44FE-8321-36FA11F991C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2FFE06-00AA-44FE-8321-36FA11F991C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2FFE06-00AA-44FE-8321-36FA11F991C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2FFE06-00AA-44FE-8321-36FA11F991C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{428B16D1-5E72-4832-8D63-E99936964D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428B16D1-5E72-4832-8D63-E99936964D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428B16D1-5E72-4832-8D63-E99936964D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428B16D1-5E72-4832-8D63-E99936964D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +76,10 @@ Global
 		{27E37BF2-A4B9-408E-9DEA-CF78E52DDD85} = {AD7D4181-65C8-4EDC-9F41-7284F127199E}
 		{F9DBAF4A-630D-4054-A85A-141B8E495EC9} = {AD7D4181-65C8-4EDC-9F41-7284F127199E}
 		{ECD50720-E5E7-47CF-97EE-D86D5A5995F8} = {AD7D4181-65C8-4EDC-9F41-7284F127199E}
+		{F0F7D337-6F34-4554-9D33-DDD8919C6267} = {D9066443-EBE1-4AF0-8659-352AC0BE660C}
+		{FE2FFE06-00AA-44FE-8321-36FA11F991C9} = {D9066443-EBE1-4AF0-8659-352AC0BE660C}
+		{428B16D1-5E72-4832-8D63-E99936964D03} = {D9066443-EBE1-4AF0-8659-352AC0BE660C}
+		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D} = {D9066443-EBE1-4AF0-8659-352AC0BE660C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE39CABF-6560-4F2A-93A3-93618AEAC754}
