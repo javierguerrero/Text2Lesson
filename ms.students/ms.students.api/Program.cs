@@ -47,7 +47,7 @@ builder.Services.AddSwaggerGen(swagger =>
 });
 
 // For Entity Framework
-var connectionString = $"Server={configuration.GetConnectionString("StudentDB:HostName")};" +
+var connectionString = $"Server={configuration.GetConnectionString("StudentDB:HostName")},1434;" +
                                 $"Database={configuration.GetConnectionString("StudentDB:Catalogue")};" +
                                 $"User ID={configuration.GetConnectionString("StudentDB:User")};" +
                                 $"Password={configuration.GetConnectionString("StudentDB:Password")};" +

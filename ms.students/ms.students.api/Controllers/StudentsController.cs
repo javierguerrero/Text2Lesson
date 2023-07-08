@@ -16,13 +16,13 @@ namespace ms.students.api.Controllers
 
         public StudentsController(IMediator mediator) => _mediator = mediator;
 
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("[action]")]
         public async Task<IActionResult> GetAllStudents()
             => Ok(await _mediator.Send(new GetAllStudentsQuery()));
 
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("[action]")]
         public async Task<IActionResult> CreateStudent([FromBody] CreateStudentRequest employee) =>

@@ -17,8 +17,8 @@ namespace ms.students.infrastructure.Data
 
             modelBuilder.Entity<Student>()
                 .HasData(
-                    new Student() { UserName = "mcampovero", FirstName = "Maribel", LastName = "Campovero" },
-                    new Student() { UserName = "jdoe", FirstName = "John", LastName = "Doe" }
+                    new Student() { Id = 1, UserName = "mcampovero", FirstName = "Maribel", LastName = "Campovero" },
+                    new Student() { Id = 2, UserName = "jdoe", FirstName = "John", LastName = "Doe" }
                 );
         }
     }
