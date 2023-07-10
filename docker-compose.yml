@@ -3,9 +3,17 @@ version: '3.4'
 services:
   ms.sql.users.db:
     image: mcr.microsoft.com/mssql/server
+  ms.sql.students.db:
+    image: mcr.microsoft.com/mssql/server
 
   ms.users.api:
     image: ${DOCKER_REGISTRY-}msusers
     build:
       context: .
       dockerfile: ms.users/ms.users.api/Dockerfile
+
+  ms.students.api:
+    image: ${DOCKER_REGISTRY-}msstudents
+    build:
+      context: .
+      dockerfile: ms.students/ms.students.api/Dockerfile

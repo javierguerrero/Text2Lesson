@@ -5,10 +5,21 @@ services:
     container_name: ms.sql.users.db
     restart: always
     volumes:
-      - /c/data/docker/text2lesson/sqlserver:/var/opt/mssql/data
+      - /c/data/docker/text2lesson/sqlserver/users:/var/opt/mssql/data
     ports:
-      - "1433:1433"
-    environment:  #Parametros del comando
+      - "1417:1433"
+    environment:
+      SA_PASSWORD: ".123Pass456."
+      ACCEPT_EULA: "Y"
+
+  ms.sql.students.db:
+    container_name: ms.sql.students.db
+    restart: always
+    volumes:
+      - /c/data/docker/text2lesson/sqlserver/students:/var/opt/mssql/data
+    ports:
+      - "1418:1433"
+    environment:
       SA_PASSWORD: ".123Pass456."
       ACCEPT_EULA: "Y"
 
@@ -24,3 +35,16 @@ services:
       - "9010:80"
     depends_on:
       - ms.sql.users.db
+
+  ms.students.api:
+    container_name: ms.students.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:StudentDB:HostName=ms.sql.students.db"
+      - "ConnectionStrings:StudentDB:Catalogue=Students"
+      - "ConnectionStrings:StudentDB:User=sa"
+      - "ConnectionStrings:StudentDB:Password=.123Pass456."
+    ports:
+      - "9020:80"
+    depends_on:
+      - ms.sql.students.db
