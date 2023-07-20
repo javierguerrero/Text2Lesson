@@ -17,13 +17,17 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ms.students", "ms.students", "{D9066443-EBE1-4AF0-8659-352AC0BE660C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.domain", "ms.students\ms.students.domain\ms.students.domain.csproj", "{F0F7D337-6F34-4554-9D33-DDD8919C6267}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ms.students.domain", "ms.students\ms.students.domain\ms.students.domain.csproj", "{F0F7D337-6F34-4554-9D33-DDD8919C6267}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.application", "ms.students\ms.students.application\ms.students.application.csproj", "{FE2FFE06-00AA-44FE-8321-36FA11F991C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ms.students.application", "ms.students\ms.students.application\ms.students.application.csproj", "{FE2FFE06-00AA-44FE-8321-36FA11F991C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.infrastructure", "ms.students\ms.students.infrastructure\ms.students.infrastructure.csproj", "{428B16D1-5E72-4832-8D63-E99936964D03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ms.students.infrastructure", "ms.students\ms.students.infrastructure\ms.students.infrastructure.csproj", "{428B16D1-5E72-4832-8D63-E99936964D03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ms.students.api", "ms.students\ms.students.api\ms.students.api.csproj", "{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ms.students.api", "ms.students\ms.students.api\ms.students.api.csproj", "{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ms.rabbitmq", "ms.communications\ms.rabbitmq\ms.rabbitmq.csproj", "{2C42BC60-218F-4369-8820-6A6B8E11B2C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ms.communications", "ms.communications", "{C8E315F5-6FD0-40CA-95BD-CFE42B6829F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +71,10 @@ Global
 		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C42BC60-218F-4369-8820-6A6B8E11B2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C42BC60-218F-4369-8820-6A6B8E11B2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C42BC60-218F-4369-8820-6A6B8E11B2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C42BC60-218F-4369-8820-6A6B8E11B2C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +88,7 @@ Global
 		{FE2FFE06-00AA-44FE-8321-36FA11F991C9} = {D9066443-EBE1-4AF0-8659-352AC0BE660C}
 		{428B16D1-5E72-4832-8D63-E99936964D03} = {D9066443-EBE1-4AF0-8659-352AC0BE660C}
 		{7BF11FDD-9B01-4202-8C19-A04D310ACA7D} = {D9066443-EBE1-4AF0-8659-352AC0BE660C}
+		{2C42BC60-218F-4369-8820-6A6B8E11B2C2} = {C8E315F5-6FD0-40CA-95BD-CFE42B6829F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE39CABF-6560-4F2A-93A3-93618AEAC754}
