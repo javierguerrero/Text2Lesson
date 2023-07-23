@@ -15,3 +15,7 @@ Connect to a different port with SQL Server Management Studio
 	localhost,1433
 	localhost,1434
 	
+
+
+https://www.c-sharpcorner.com/blogs/net-core-rest-api-and-angular-environmental-configuration-part-iii
+https://www.youtube.com/watch?v=pzkqQXvmZSc

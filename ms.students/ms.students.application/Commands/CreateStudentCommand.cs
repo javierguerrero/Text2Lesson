@@ -7,5 +7,7 @@ using System.Threading.Tasks;
 
 namespace ms.students.application.Commands
 {
-    public record CreateStudentCommand(string userName, string firstName, string lastName) : IRequest<string>;
+    public record CreateStudentCommand(string userName, string firstName, 
+                                       string lastName, string email, 
+                                       string password, string role) : IRequest<string>;
 }

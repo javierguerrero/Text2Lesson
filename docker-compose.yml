@@ -3,6 +3,7 @@ version: '3.4'
 services:
   ms.sql.users.db:
     image: mcr.microsoft.com/mssql/server
+
   ms.sql.students.db:
     image: mcr.microsoft.com/mssql/server
 
@@ -17,3 +18,10 @@ services:
     build:
       context: .
       dockerfile: ms.students/ms.students.api/Dockerfile
+
+  ms.webspa:
+    image: ${DOCKER_REGISTRY-}mswebspa
+    build: 
+        context: .
+        dockerfile: ms.webspa/Dockerfile
+    

@@ -48,3 +48,10 @@ services:
       - "9020:80"
     depends_on:
       - ms.sql.students.db
+
+  ms.webspa:
+    container_name: ms.webspa
+    ports:
+      - "4200:80"
+    depends_on:
+      - ms.users.api

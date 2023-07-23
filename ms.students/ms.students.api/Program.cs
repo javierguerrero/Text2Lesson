@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ms.rabbitmq.Producers;
 using ms.students.application.Mappers;
 using ms.students.application.Queries;
 using ms.students.domain.Interfaces;
@@ -18,6 +19,9 @@ ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+// Configurar dependencias
+builder.Services.AddScoped(typeof(IProducer), typeof(EventProducer));
 
 //Habilitar el ingreso del Bearer token a través de la interfaz de Swagger
 builder.Services.AddSwaggerGen(swagger =>

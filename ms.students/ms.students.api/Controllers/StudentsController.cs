@@ -26,6 +26,8 @@ namespace ms.students.api.Controllers
         [HttpPost]
         [Route("[action]")]
         public async Task<IActionResult> CreateStudent([FromBody] CreateStudentRequest employee) =>
-            Ok(await _mediator.Send(new CreateStudentCommand(employee.UserName, employee.FirstName, employee.LastName)));
+            Ok(await _mediator.Send(new CreateStudentCommand(employee.UserName, employee.FirstName, 
+                                                             employee.LastName, employee.Email,
+                                                             employee.Password, employee.Role)));
     }
 }
